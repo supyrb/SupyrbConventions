@@ -17,6 +17,8 @@
    * Use if you add files to the repository
  * **CHANGE**
    * Use if you change code
+ * **UPDATE**
+   * Use if you update the unity version or any plugins
  * **REMOVE**
    * Use if you delete files
  * **FIX**
