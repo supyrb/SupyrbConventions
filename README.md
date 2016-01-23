@@ -18,7 +18,9 @@
  * **CHANGE**
    * Use if you change code
  * **UPDATE**
-   * Use if you update the unity version or any plugins
+   * Use if you update the unity version, plugins or assets
+ * **TWEAK**
+   * Use if you did changes on gameplay values or asset properties, but didn't change any code
  * **REMOVE**
    * Use if you delete files
  * **FIX**
