@@ -27,7 +27,7 @@
    * Use if you fix bugs
  * **DOC**
    * Use if you do documentation work like adding comments
- * **CLEANUP**
+ * **REFACTOR**
    * Use if you clean up functions or file structures
 
 ### Subject
