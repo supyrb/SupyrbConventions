@@ -16,6 +16,7 @@ We follow these naming conventions: http://www.dofactory.com/reference/csharp-co
 ## Unity specific
 * Use [SerializeField] (with a public property if necessary) instead of public fields.
 * Use [Tooltip("")] for commenting fields
+
   ```
   // Use Tooltips for commenting exposed fields
   [Tooltip("This int can have a default value." +
