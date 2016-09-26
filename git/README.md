@@ -1,4 +1,5 @@
 # GitConventions
+
 ## General
 Use [Sourcetree](https://www.sourcetreeapp.com/) or the terminal to connect to and work with the repository.
 We use a modified version of [git flow](http://nvie.com/posts/a-successful-git-branching-model/) to get a structured branching.
@@ -8,6 +9,7 @@ We use a modified version of [git flow](http://nvie.com/posts/a-successful-git-b
 * Use hotfix branches from the master branch which go back into the master as well as develop if necessary.
 * Do not use release branches, due to an unnecessary overhead
 * Use the sourcetree's git flow solution, if you don't feel 100% confident with the terminal
+
 ## Messages
 ```
 <Type> <subject>
