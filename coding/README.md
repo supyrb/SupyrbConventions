@@ -8,6 +8,7 @@ Our unity projects are written in C#. Get an IDE you can work with. General reco
  * [Visual Studio for Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
  * [Spell Checker](https://visualstudiogallery.msdn.microsoft.com/7c8341f1-ebac-40c8-92c2-476db8d523ce)
  * [Shader Unity Support](https://visualstudiogallery.msdn.microsoft.com/ed812631-a7d3-4ca3-9f84-7efb240c7bb5)
+ * [Code Maid](https://visualstudiogallery.msdn.microsoft.com/76293c4d-8c16-4f4a-aee6-21f83a571496)
 * [Monodevelop for Mac](http://www.monodevelop.com/)
 
 ## Naming Conventions
