@@ -10,7 +10,7 @@ We use a modified version of [git flow](http://nvie.com/posts/a-successful-git-b
 * The develop branch has always a working copy. You can commit to the develop branch for simple changes, as long as it doesn't break the copy.
 * Use feature branches which start from and go back into the develop branch for developing new features.
 * Use hotfix branches from the master branch which go back into the master as well as develop if necessary.
-* Do not use release branches, due to an unnecessary overhead
+* Use Release Branches for minor and major releases, but not for revisions
 * Use the sourcetree's git flow solution, if you don't feel 100% confident with the terminal
 
 ## Messages
