@@ -1,5 +1,8 @@
 # GitConventions
 
+## .gitignore files
+* [.gitignore standalone (v0.1.2)](gitignore/standalone/.gitignore)
+
 ## General
 Use [Sourcetree](https://www.sourcetreeapp.com/) or the terminal to connect to and work with the repository.
 We use a modified version of [git flow](http://nvie.com/posts/a-successful-git-branching-model/) to get a structured branching.
