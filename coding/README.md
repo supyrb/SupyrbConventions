@@ -2,17 +2,15 @@
 Coding conventions for C# in Unity
 
 ## IDE
-Our unity projects are written in C#. Get an IDE you can work with. General recommendations:
-* [Visual Studio Community for Windows](https://www.visualstudio.com/vs/community/)
+Windows:
+* [Visual Studio Community 2017](https://www.visualstudio.com/vs/community/)
  * [ReSharper](https://www.jetbrains.com/resharper/)
- * [Visual Studio for Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+  * [Resharper Settings v0.1](settings/Resharper_SupyrbTeamSettings_v0.1.DotSettings)
+  * [Heapview](https://github.com/controlflow/resharper-heapview)
  * [Spell Checker](https://visualstudiogallery.msdn.microsoft.com/7c8341f1-ebac-40c8-92c2-476db8d523ce)
- * [Shader Unity Support](https://visualstudiogallery.msdn.microsoft.com/ed812631-a7d3-4ca3-9f84-7efb240c7bb5)
- * [Code Maid](https://visualstudiogallery.msdn.microsoft.com/76293c4d-8c16-4f4a-aee6-21f83a571496)
-* [Monodevelop for Mac](http://www.monodevelop.com/)
 
 ## Naming Conventions
-We follow these naming conventions: http://www.dofactory.com/reference/csharp-coding-standards
+Follow these naming conventions: http://www.dofactory.com/reference/csharp-coding-standards
 
 ## Unity specific
 * Use [SerializeField] (with a public property if necessary) instead of public fields.
@@ -26,8 +24,28 @@ We follow these naming conventions: http://www.dofactory.com/reference/csharp-co
   ...
   public int SomeInt { get {return someInt; } }
   ```
-* For complex configurations create four [Serializable] classes with the group naming:
- * *Configuration variables* are tweakable values variables about the initial state and behaviour of the object
- * *State variables* contain information about the state the object is in right now. Those values can be exposed for debugging reasons. If they are exposed an debugging variable read the states has to be established
- * *Bookkeeping variables* contain information about past states, something like counters or time information
- * *Connector variables* connect this object with other assets and scripts like the rigidbody or a text
+* If not explicitly required to have a component use [Reset()](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Reset.html) instead of [[RequireComponent()]](https://docs.unity3d.com/ScriptReference/RequireComponent.html)
+* Use [OnValidate()](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnValidate.html) to precalculate properties
+* Pack all editor scripts like Reset(), OnValidate() or other methods only used in the editor at the end of the class and encapsulate them with #UnityEditor
+  ```
+  #if UNITY_EDITOR
+  [Button]
+  public void SortArray()
+  {
+    Array.Sort(sortedArray);
+  }
+
+  void Reset()
+  {
+    if(player == null)
+    {
+      player = GetComponent<Player>();
+    }
+  }
+
+  void OnValidate()
+  {
+    reciprocalValue = 1f/value;
+  }
+  #endif
+  ```
