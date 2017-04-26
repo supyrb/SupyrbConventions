@@ -1,7 +1,7 @@
 # GitConventions
 
 ## .gitignore files
-* [.gitignore standalone (v0.1.2)](gitignore/standalone/.gitignore)
+* [.gitignore standalone (v0.1.3)](gitignore/standalone/.gitignore)
 
 ## General
 Use [Sourcetree](https://www.sourcetreeapp.com/) or the terminal to connect to and work with the repository.
