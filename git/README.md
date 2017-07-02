@@ -25,8 +25,8 @@ We use a modified version of [git flow](http://nvie.com/posts/a-successful-git-b
  * **DON'T** ADDS present tense rule to conventions
 
 ### Type
-* Types are always written in capital letters
-* The following types are allowed:
+Types are always written in capital letters
+The following types are allowed:
  * **ADD**
    * Use if you add files to the repository
  * **CHANGE**
