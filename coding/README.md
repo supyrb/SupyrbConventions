@@ -7,6 +7,7 @@ Windows:
   * [ReSharper](https://www.jetbrains.com/resharper/)
     * [Resharper Settings v0.1](settings/Resharper_SupyrbTeamSettings_v0.1.DotSettings)
     * [Heapview](https://github.com/controlflow/resharper-heapview)
+    * [Resharper Unity](https://github.com/JetBrains/resharper-unity)
   * [Spell Checker](https://visualstudiogallery.msdn.microsoft.com/7c8341f1-ebac-40c8-92c2-476db8d523ce)
 * [Notepad ++](https://notepad-plus-plus.org)
   * [Shader highlighting theme](https://github.com/JohannesDeml/NotepadPP-SolarizeShaderTheme)
