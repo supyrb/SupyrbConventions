@@ -17,6 +17,7 @@
 *.user
 *.unityproj
 *.booproj
+.vs
 
 *.csproj
 *.cache
