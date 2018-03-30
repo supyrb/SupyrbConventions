@@ -27,21 +27,21 @@ We use a modified version of [git flow](http://nvie.com/posts/a-successful-git-b
 ### Type
 Types are always written in capital letters  
 The following types are allowed:
- * **ADD**
+ * **Add**
    * Use if you add files to the repository
- * **CHANGE**
+ * **Change**
    * Use if you change code
- * **UPDATE**
+ * **Update**
    * Use if you update the unity version, plugins or assets
- * **TWEAK**
+ * **Tweak**
    * Use if you did changes on gameplay values or asset properties, but didn't change any code
- * **REMOVE**
+ * **Remove**
    * Use if you delete files
- * **FIX**
+ * **Fix**
    * Use if you fix bugs
- * **DOC**
+ * **Doc**
    * Use if you do documentation work like adding comments
- * **REFACTOR**
+ * **Refactor**
    * Use if you clean up functions or file structures
 
 ### Subject
