@@ -1,11 +1,11 @@
-# Supyrb .gitignore standalone v0.1.5
+# Supyrb .gitignore standalone v0.1.6
 
 # Unity generated
 /Temp/**
 /Library/**
 /obj/**
 
-# Visual Studio / MonoDevelop generated
+# Visual Studio / Rider / MonoDevelop generated
 /ExportedObj/**
 /obj
 /.vs/**
@@ -26,7 +26,10 @@
 *.orig
 *.orig.*
 *sln*
+
 .idea/**
+/Assets/Plugins/Editor/Jetbrains/*
+/Assets/Plugins/Editor/Jetbrains.meta
 
 # OS generated
 .DS_Store
