@@ -41,12 +41,12 @@ Follow these naming conventions: http://www.dofactory.com/reference/csharp-codin
   private float startVelocity = 5f;
   ```
 * Use `[HideInNormalInspector]` instead of `[HideInInspector]` in order to still see the values in the debug inspector
-```csharp
-[Tooltip("The precalculated squared maximum speed for faster comparison")]
-[HideInNormalInspector]
-[SerializeField]
-private float squaredMaxSpeed = 5f;
-```
+  ```csharp
+  [Tooltip("The precalculated squared maximum speed for faster comparison")]
+  [HideInNormalInspector]
+  [SerializeField]
+  private float squaredMaxSpeed = 5f;
+  ```
 * If not explicitly required to have a component use [Reset()](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Reset.html) instead of [[RequireComponent()]](https://docs.unity3d.com/ScriptReference/RequireComponent.html)
 * Use [OnValidate()](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnValidate.html) to precalculate properties
 * Pack all editor scripts like Reset(), OnValidate() or other methods only used in the editor at the end of the class and encapsulate them with #if UNITY_EDITOR #endif
