@@ -1,6 +1,11 @@
 # Coding Conventions
 Coding conventions for C# in Unity
 
+## Downloads
+* [Jetbrains Rider settings](settings/rider-settings.jar)
+* [Jetbrains Resharper settings](settings/Resharper_SupyrbTeamSettings.DotSettings)
+* [Visual Studio Settings](VisualStuioSettings.vssettings)
+
 ## IDE
 Windows:
 * [Visual Studio Community 2017](https://www.visualstudio.com/vs/community/)
@@ -16,35 +21,44 @@ Windows:
 Follow these naming conventions: http://www.dofactory.com/reference/csharp-coding-standards
 
 ## Unity specific
-* Use [SerializeField] (with a public property if necessary) instead of public fields.
-  ```
-  [SerializeField] private int someInt = 0;
+* Use `[SerializeField]` (with a public property if necessary) instead of public fields.
+  ```csharp
+  [SerializeField]
+  private int someInt = 0;
   ...
   public int SomeInt { get {return someInt; } }
   ```
-* Use [Tooltip("")] for commenting fields
-  ```
+* Use `[Tooltip("")]` for commenting fields
+  ```csharp
   [Tooltip("Changes the horizontal speed of the player")]
-  [SerializeField] private float horizontalSpeed = 2f;
+  [SerializeField]
+  private float horizontalSpeed = 2f;
   ```
-* Use [Unit("")] to give extra information about the unit of a field
-  ```
+* Use `[Unit("")]` to give extra information about the unit of a field
+  ```csharp
   [Unit("meters/second")]
-  [SerializeField] private float startVelocity = 5f;
+  [SerializeField]
+  private float startVelocity = 5f;
   ```
-  
+* Use `[HideInNormalInspector]` instead of `[HideInInspector]` in order to still see the values in the debug inspector
+```csharp
+[Tooltip("The precalculated squared maximum speed for faster comparison")]
+[HideInNormalInspector]
+[SerializeField]
+private float squaredMaxSpeed = 5f;
+```
 * If not explicitly required to have a component use [Reset()](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Reset.html) instead of [[RequireComponent()]](https://docs.unity3d.com/ScriptReference/RequireComponent.html)
 * Use [OnValidate()](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnValidate.html) to precalculate properties
 * Pack all editor scripts like Reset(), OnValidate() or other methods only used in the editor at the end of the class and encapsulate them with #if UNITY_EDITOR #endif
-  ```
+  ```csharp
   #if UNITY_EDITOR
   [Button]
-  public void SortArray()
+  private void SortArray()
   {
     Array.Sort(sortedArray);
   }
 
-  void Reset()
+  private void Reset()
   {
     if(player == null)
     {
@@ -52,9 +66,11 @@ Follow these naming conventions: http://www.dofactory.com/reference/csharp-codin
     }
   }
 
-  void OnValidate()
+  // Called whenever the user changes a value in the inspector
+  private void OnValidate()
   {
     reciprocalValue = 1f/value;
+    squaredMaxSpeed = maxSpeed * maxSpeed;
   }
   #endif
   ```
