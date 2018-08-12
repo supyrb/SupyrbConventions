@@ -1,28 +1,37 @@
 # GitConventions
 
-## .gitignore files
-* [.gitignore standalone (v0.1.5)](gitignore/standalone/.gitignore)
+## Downloads
+* [.gitignore for Unity (v0.1.6)](gitignore/.gitignore)
+* [Speical Folder Structure](SpecialFolders.zip)
 
 ## General
-Use [Sourcetree](https://www.sourcetreeapp.com/) or the terminal to connect to and work with the repository.
-We use a modified version of [git flow](http://nvie.com/posts/a-successful-git-branching-model/) to get a structured branching.
+We use a simplified version of [git flow](http://nvie.com/posts/a-successful-git-branching-model/). There is a master branch that is holy as it should be, there is a develop branch that always works, but might get messy and there are feature and release branches to get structure in there.
+* Recommended Software: [Sourcetree](https://www.sourcetreeapp.com/) (Alternatives: [Terminal](https://git-scm.com/docs), [Git Kraken](https://www.gitkraken.com/), [Git Tower](https://www.git-tower.com/))
 * The master branch is used for the last stable build. This build should not have any features in development in order to be used for presentations or exhibitions.
 * The develop branch has always a working copy. You can commit to the develop branch for simple changes, as long as it doesn't break the copy.
 * Use feature branches which start from and go back into the develop branch for developing new features.
-* Use hotfix branches from the master branch which go back into the master as well as develop if necessary.
-* Use Release Branches for minor and major releases, but not for revisions
-* Use the sourcetree's git flow solution, if you don't feel 100% confident with the terminal
+* Use Release Branches for minor and major releases
+* Spilt up commits with multiple changes that are not connected
 
-## Messages
+## Special folders
+* Use `ROOT/Builds` for builds.  
+Recommended structure: `ROOT/Builds/Platform/Version/ProductName` (e.g.`ROOT/Builds/Android/0.8.3.17/Marbloid.apk`)
+* Use `ROOT/Data` for data like screenshots and videos.  
+Recommended structure: `ROOT/Data/Screenshots`, `ROOT/Data/Videos`
+* Use `ROOT/Assets/Temp` for files that you need in the project, but which should not be included in the repository.
+* Use `ROOT/FMOD` for the fmod project if applicable.
+
+## Commit messages
 ```
 <Type> <subject>
 
 <Body>
 ```
-* Messages are written in imperative present tense.
- * **DO**    ADD present tense rule to conventions
- * **DON'T** ADDED present tense rule to conventions
- * **DON'T** ADDS present tense rule to conventions
+Messages are written in imperative present tense.
+* **DO**    `Add present tense rule to conventions`
+* **DON'T**    `Added present tense rule to conventions`
+* **DON'T** `Added present tense rule to conventions`
+* **DON'T** `Adds present tense rule to conventions`
 
 ### Type
 Types are always written in capital letters  
@@ -31,24 +40,19 @@ The following types are allowed:
    * Use if you add files to the repository
  * **Change**
    * Use if you change code
- * **Update**
-   * Use if you update the unity version, plugins or assets
- * **Tweak**
-   * Use if you did changes on gameplay values or asset properties, but didn't change any code
- * **Remove**
-   * Use if you delete files
  * **Fix**
    * Use if you fix bugs
- * **Doc**
-   * Use if you do documentation work like adding comments
- * **Refactor**
-   * Use if you clean up functions or file structures
+ * **Remove**
+   * Use if you delete files
+ * **Update**
+   * Use if you update the unity version, plugins or assets
+ * **Automatic**
+   * Use when you run automatic scripts like automatic code reformating
 
 ### Subject
 * The subject starts with a lower case letter
 * Between the Type and the subject there is one space
 * It is a short precise explanation of the committed changes
-* it should be no longer than 72 characters
 
 ### Body
 * The body is an optional detailed description of the changes
