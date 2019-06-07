@@ -1,7 +1,7 @@
 # GitConventions
 
 ## Downloads
-* [.gitignore for Unity (v0.1.6)](gitignore/.gitignore)
+* [.gitignore for Unity](gitignore/.gitignore)
 * [Speical Folder Structure](SpecialFolders.zip)
 
 ## General
