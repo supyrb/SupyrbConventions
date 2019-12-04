@@ -1,6 +1,7 @@
-# Supyrb .gitignore standalone v0.1.6
+# Supyrb .gitignore standalone v0.2.0
 
 # Unity generated
+/.gradle/**
 /Temp/**
 /Library/**
 /obj/**
@@ -41,6 +42,10 @@ ehthumbs.db
 Thumbs.db
 report.xml
 
+# Other
+/CodeCoverage/**
+/SHFB/Help/**
+
 # FMOD
 /Assets/FMODStudioCache.asset
 /Assets/FMODStudioCache.asset.meta
@@ -56,6 +61,7 @@ fmod_editor.log
 # Custom
 /Builds/**
 /Data/**
-/SHFB/Help/**
+/Assets/_Project/Preferences/Editor/Credentials/**
+/Assets/_Project/Preferences/Editor/Credentials.meta
 /Assets/Temp/**
 /Assets/Temp.meta

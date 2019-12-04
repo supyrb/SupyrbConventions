@@ -6,8 +6,11 @@ Coding conventions for C# in Unity
 * [Jetbrains Resharper settings](settings/Resharper_SupyrbTeamSettings.DotSettings)
 * [Visual Studio Settings](VisualStuioSettings.vssettings)
 
-## IDE
-Windows:
+## IDEs
+* [Jetbrains Rider](https://www.jetbrains.com/rider/download/)
+  * [Unity Support](https://plugins.jetbrains.com/plugin/9219-unity-support)
+  * [Heap Allocations Viewer](https://plugins.jetbrains.com/plugin/9223-heap-allocations-viewer)
+  * [Hunspell](https://plugins.jetbrains.com/plugin/10275-hunspell)
 * [Visual Studio Community 2017](https://www.visualstudio.com/vs/community/)
   * [ReSharper](https://www.jetbrains.com/resharper/)
     * [Resharper Settings v0.1](settings/Resharper_SupyrbTeamSettings_v0.1.DotSettings)
